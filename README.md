@@ -1,3 +1,3 @@
 # odin-form
 
-### Creating a responsive form for TOP project
+### Creating a responsive form for TOP

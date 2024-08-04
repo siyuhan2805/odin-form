@@ -1,0 +1,137 @@
+
+/* HOSTED FONTS */
+@font-face {
+    font-family: 'norsebold';
+    src: url('/fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('/fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* ROOT CSS SELECTORS*/
+:root {
+    --heading-font: "norsebold";
+
+    /* Font colours */
+    --heading-color: #fff;
+    --footer-color: #fff;
+
+    /* Background colours */
+    --background-side: rgba(0, 0, 0, 0.609);
+    --background-body: rgba(37, 37, 37, 0.901);
+    --background-main: rgba(250, 250, 251);
+    --background-form: rgba(255, 255, 255);
+
+    /* font-sizes */
+    --side-heading-size: 9.6rem;
+    --side-credits-size: 1.8rem;
+    --main-aside-size: 2.4rem;
+
+
+
+
+}
+
+/* APPLY PAGE RESET */
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 140rem;
+    margin: 0 auto;
+    background-color: var(--background-body);
+    
+}
+
+/********************/
+/* REUSABLE CLASSES */
+/********************/
+
+.container {
+    display: flex;
+}
+
+/********************/
+/* SIDEBAR CLASSES */
+/********************/
+
+.side-container {
+    background-image: url(./images/clement-m-igX2deuD9lc-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+.side-heading {
+    display: flex;
+    background-color: var(--background-side);
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    margin-top: 30%;
+}
+
+.side-logo {
+    width: 20%;
+}
+
+.side-title {
+    font-family: var(--heading-font);
+    font-size: var(--side-heading-size);
+    color: var(--heading-color);
+}
+
+.side-credits {
+    color: var(--footer-color);
+    margin-bottom: 5%;
+    font-size: var(--side-credits-size);
+    text-align: center;
+}
+
+/********************/
+/* MAIN CLASSES     */
+/********************/
+
+.main-container {
+    background-color: var(--background-main);
+    width: 60%;
+    font-weight: 400;
+}
+
+/********************/
+/* ASIDE CLASSES    */
+/********************/
+
+
+.aside-container {
+    margin: 20% 15% 5% 5%;
+    font-size: var(--main-aside-size);
+}
+
+.aside-text {
+    margin-bottom: 3.2rem;
+}
+
+/********************/
+/* FORM CLASSES    */
+/********************/
+
+.main-form {
+    background-color: var(--background-form);
+}

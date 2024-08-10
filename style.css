@@ -134,4 +134,20 @@ body {
 
 .main-form {
     background-color: var(--background-form);
+    display: flex;
+    flex-direction: column;
+    padding: 5% 15% 5% 5%;
+    
+}
+
+.form-section {
+    display: flex;
+    gap: 10%;
+    margin-bottom: 2.4rem;
+    border: none;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
 }

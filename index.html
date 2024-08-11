@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Form</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -28,41 +29,47 @@
                     You <em>know</em> you want to.
                 </aside>
             </div>
-            <form class="main-form" action="#" method="post">
+            <form id="create-acc-form" class="main-form" action="#" method="post">
                 <h2>Let's do this!</h2>
                 <fieldset class="form-section">
                     <div class="form-input">
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name">
+                        <input required type="text" id="first-name" name="first-name">
                     </div>
                     <div class="form-input">
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name">
+                        <input required type="text" id="last-name" name="last-name">
                     </div>
                 </fieldset>
                 <fieldset class="form-section">
                     <div class="form-input">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
+                        <input required type="email" id="email" name="email">
                     </div>
                     <div class="form-input">
                         <label for="phone">Phone Number</label>
-                        <input type="number" id="phone" name="phone">
+                        <input required placeholder="+61" minlength="9" maxlength="9" pattern="(\d{9})"type="tel" id="phone" name="phone">
                     </div>
                 </fieldset>
                 <fieldset class="form-section">
                     <div class="form-input">
-                        <label for="password">Password</label>
-                        <input type="text" id="password" name="password">
+                        <label for="password">password</label>
+                        <input class="form-password" required type="password" id="password" name="password">
+                        <span class="form-error-msg">*Passwords do not match</span>
                     </div>
                     <div class="form-input">
                         <label for="confirm-pass">Confirm Password</label>
-                        <input type="text" id="confirm-pass" name="confirm-pass">
+                        <input class="form-confirm-password" required type="password" id="confirm-pass" name="confirm-pass">
                     </div>
                 </fieldset>
             </form>
-                
+
+            <div class="main-signup">
+                <button class="submit-btn" type="submit" form="create-acc-form">Create Account</button>
+                <p class="main-alt-signup">Already have an account? <a href="#" target="_blank">Log in</a></p>
+            </div>
         </section>
+        
     </div>
     
 </body>

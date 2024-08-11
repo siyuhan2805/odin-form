@@ -13,24 +13,31 @@
 /* ROOT CSS SELECTORS*/
 :root {
     --heading-font: "norsebold";
-
-    /* Font colours */
-    --heading-color: #fff;
-    --footer-color: #fff;
-
+    
     /* Background colours */
     --background-side: rgba(0, 0, 0, 0.609);
     --background-body: rgba(37, 37, 37, 0.901);
     --background-main: rgba(250, 250, 251);
     --background-form: rgba(255, 255, 255);
+    --btn-color: #596D48;
 
-    /* font-sizes */
+    /* Font-sizes */
     --side-heading-size: 9.6rem;
-    --side-credits-size: 1.8rem;
-    --main-aside-size: 2.4rem;
+    --side-credits-size: 1.2rem;
+    --main-aside-size: 2.2rem;
+    --main-heading-size: 2.2rem;
+    --main-signup-size: 1.4rem;
 
-
-
+    /* Font-colors */
+    --heading-color: #fff;
+    --footer-color: #fff;
+    --form-label: rgba(0, 0, 0, 0.648);
+    --form-heading: rgba(0, 0, 0, 0.852);
+    --btn-text: rgba(250, 250, 251);
+    
+    /* Border-colors */
+    --border-edge: rgb(220, 220, 220);
+    --border-edge-invalid: rgb(199, 72, 72);
 
 }
 
@@ -104,6 +111,10 @@ body {
     text-align: center;
 }
 
+.side-credits > footer > a {
+    color: var(--footer-color);
+}
+
 /********************/
 /* MAIN CLASSES     */
 /********************/
@@ -136,8 +147,15 @@ body {
     background-color: var(--background-form);
     display: flex;
     flex-direction: column;
-    padding: 5% 15% 5% 5%;
-    
+    padding: 3% 15% 1% 5%;
+    box-shadow: 2px 5px 3px rgb(217, 215, 215);
+}
+
+.main-form > h2 {
+    margin-bottom: 2.4rem;
+    font-size: var(--main-heading-size);
+    font-weight: 500;
+    color: var(--form-heading);
 }
 
 .form-section {
@@ -150,4 +168,71 @@ body {
 .form-input {
     display: flex;
     flex-direction: column;
+    width: 40%;
 }
+
+.form-input > label {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    margin-bottom: .2rem;
+    color: var(--form-label);
+    
+}
+
+.form-input > input {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border-edge);
+    border-radius: .2rem;
+}
+
+.form-input > input:focus {
+    box-shadow: 1px 3px 5px rgb(172, 170, 170);
+}
+
+.form-error-msg {
+    color: var(--border-edge-invalid);
+    display: none;
+}
+
+
+.form-password:invalid,
+.form-confirm-password:invalid {
+    border: 1px solid var(--border-edge-invalid);
+}
+
+/********************/
+/* SIGNUP CLASSES    */
+/********************/
+.main-signup {
+    padding: 3% 15% 1% 5%;
+}
+
+.main-signup > button {
+    border: none;
+    border-radius: .6rem;
+    padding: 1.2rem 4.8rem;
+    background-color: var(--btn-color);
+    color: var(--btn-text);
+    margin-bottom: 2.4rem;
+    font-weight: bold;
+    box-shadow: 1px 2px 3px rgb(200, 199, 199);
+    
+}
+
+.main-signup > button:hover {
+    cursor: pointer;
+}
+
+.main-signup > p {
+    color: var(--form-heading);
+    font-size: var(--main-signup-size);
+}
+
+.main-signup > p > a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--btn-color);
+}
+
+
